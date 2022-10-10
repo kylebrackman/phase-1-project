@@ -6,16 +6,17 @@ searchName.addEventListener("submit", function(e) {
 })
 
 const selectAgencyDropdown = document.getElementById("selectAgency")
-console.log(selectAgencyDropdown)
 
 selectAgencyDropdown.onchange = function(){
-    console.log("test change")
+    fetch("https://api.spacexdata.com/v4/crew")
+    .then(res => res.json())
+    .then(data => console.log(data))
 }
 
 
 function changeAgency(){
 }
 
-fetch("https://api.spacexdata.com/v4/crew")
-.then(res => res.json())
-.then(data => console.log(data))
+// fetch("https://api.spacexdata.com/v4/crew")
+// .then(res => res.json())
+// .then(data => console.log(data))

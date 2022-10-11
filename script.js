@@ -19,8 +19,19 @@ function changeAgency(data){
     document.querySelector("#crewMembers").appendChild(p)
 }
 
-let darkMode = document.getElementById("darkMode")
-darkMode.addEventListener("click", () => alert("working!"))
+let darkMode = document.getElementById("darkMode");
+darkMode.addEventListener("click", changeColorScheme);
+
+let dark = false;
+
+function changeColorScheme() {
+    dark = !dark
+    darkMode.innerText = "Light Mode"
+    document.body.classList.toggle("darkMode");
+    if (!dark) {
+        darkMode.innerText = "Dark Mode"
+    }
+}
 
 // function filterCrew(agencyName) {
 //     let crew = data.filter(data => data.agency === "NASA")

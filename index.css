@@ -3,7 +3,12 @@ body {
     color: black;
     font-family: "copperplate";
 }
-.dark-mode {
+.lightMode {
+    background-color: azure;
+    color: black;
+    font-family: "copperplate";
+}
+.darkMode {
     background-color: black;
     color: azure;
     font-family: "copperplate";

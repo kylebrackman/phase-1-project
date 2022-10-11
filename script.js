@@ -19,6 +19,9 @@ function changeAgency(data){
     document.querySelector("#crewMembers").appendChild(p)
 }
 
+let darkMode = document.getElementById("darkMode")
+darkMode.addEventListener("click", () => alert("working!"))
+
 // function filterCrew(agencyName) {
 //     let crew = data.filter(data => data.agency === "NASA")
 //     console.log(nasaCrew)

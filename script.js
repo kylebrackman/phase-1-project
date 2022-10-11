@@ -10,19 +10,19 @@ const selectAgencyDropdown = document.getElementById("selectAgency")
 selectAgencyDropdown.onchange = function(){
     fetch("https://api.spacexdata.com/v4/crew")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => changeAgency(data))
 }
 
-function changeAgency(agencyName){
-    if (data.agency === agencyName) {
-        return filterCrew(agencyName)
-    }
+function changeAgency(data){
+    let p = document.createElement("p")
+    p.innerText = data.name 
+    document.querySelector("#crewMembers").appendChild(p)
 }
 
-function filterCrew() {
-    let nasaCrew = data.filter(data => data.agency === "NASA")
-    console.log(nasaCrew)
-}
+// function filterCrew(agencyName) {
+//     let crew = data.filter(data => data.agency === "NASA")
+//     console.log(nasaCrew)
+// }
 
 
 

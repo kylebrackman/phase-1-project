@@ -10,14 +10,14 @@
 <body>
     <h1>Dragon Crew Members</h1>
     <p>Crew members by agency</p>
-    <select id="selectAgency">
+    <select id="selectAgency" onChange="changeAgency(this.value)">
         <option>Choose Agency</option>
-        <option>NASA</option>
-        <option>ESA</option>
-        <option>JAXA</option>
-        <option>SpaceX</option>
-        <option>Axiom Space</option>
-        <option>Roscosmos</option>
+        <option value="NASA">NASA</option>
+        <option value="ESA">ESA</option>
+        <option value="JAXA">JAXA</option>
+        <option value="SpaceX">SpaceX</option>
+        <option value="Axiom Space">Axiom Space</option>
+        <option value="Roscosmos">Roscosmos</option>
     </select>
     <p>Know your crewmember? Search by name!</p>
     <form id="search">

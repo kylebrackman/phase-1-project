@@ -10,12 +10,21 @@ const selectAgencyDropdown = document.getElementById("selectAgency")
 selectAgencyDropdown.onchange = function(){
     fetch("https://api.spacexdata.com/v4/crew")
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(changeAgency())
+}
+
+function changeAgency(data){
+    if (data.agency === NASA) {
+        return filterNasaCrew(data)
+    }
+}
+
+function filterNasaCrew(data) {
+    let nasaCrew = data.filter(data => data.agency === "NASA")
+    console.log(nasaCrew)
 }
 
 
-function changeAgency(){
-}
 
 // fetch("https://api.spacexdata.com/v4/crew")
 // .then(res => res.json())

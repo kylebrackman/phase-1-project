@@ -1,3 +1,15 @@
-h1 {
-    color: red
+body {
+    background-color: azure;
+    color: black;
+    font-family: "copperplate";
 }
+.dark-mode {
+    background-color: black;
+    color: azure;
+    font-family: "copperplate";
+}
+h1 {
+    color: red;
+    font-family: "copperplate";
+}
+

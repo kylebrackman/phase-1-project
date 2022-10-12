@@ -17,4 +17,7 @@ h1 {
     color: red;
     font-family: "copperplate";
 }
-
+img {
+    height: 300px;
+    width: auto
+}

@@ -23,8 +23,11 @@ function renderCrewNames(crew) {
         crew.forEach(crew => {
             if (crew.agency === "NASA") {
             const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            img.src = `${crew.image}`
             h2.innerHTML = crew.name
             main.appendChild(h2)
+            main.appendChild(img)
             }
         })
     }

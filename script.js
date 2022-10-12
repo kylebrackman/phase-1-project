@@ -1,13 +1,9 @@
-document.addEventListener("DOMContentLoaded", searchCrewName)
-
-const searchName = document.getElementById("search");
-searchName.addEventListener("submit", searchCrewName);
-
-function searchCrewName(e) {
-    e.preventDefault()
-    console.log(e.target.crewMemberSearch.value)
-};
-
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("search").addEventListener("submit", (e) => {
+        e.preventDefault()
+        console.log(e.target.crewMemberSearch.value)
+    })
+})
 
 
 // fetching SpaceX API and attempting to get crew info

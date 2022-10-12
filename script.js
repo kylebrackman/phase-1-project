@@ -19,6 +19,7 @@ function fetchCrewInfo() {
 
 function renderCrewNames(crew) {
     const main = document.querySelector("main")
+    main.innerHTML=""
     if (selectAgencyDropdown.value === "NASA" ) {
         crew.forEach(crew => {
             if (crew.agency === "NASA") {
@@ -35,8 +36,11 @@ function renderCrewNames(crew) {
         crew.forEach(crew => {
             if (crew.agency === "ESA") {
             const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            img.src = `${crew.image}`
             h2.innerHTML = crew.name
             main.appendChild(h2)
+            main.appendChild(img)
             }
         })
     }
@@ -44,8 +48,11 @@ function renderCrewNames(crew) {
         crew.forEach(crew => {
             if (crew.agency === "JAXA") {
             const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            img.src = `${crew.image}`
             h2.innerHTML = crew.name
             main.appendChild(h2)
+            main.appendChild(img)
             }
         })
     }
@@ -53,8 +60,11 @@ function renderCrewNames(crew) {
         crew.forEach(crew => {
             if (crew.agency === "SpaceX") {
             const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            img.src = `${crew.image}`
             h2.innerHTML = crew.name
             main.appendChild(h2)
+            main.appendChild(img)
             }
         })
     }
@@ -62,8 +72,11 @@ function renderCrewNames(crew) {
         crew.forEach(crew => {
             if (crew.agency === "Axiom Space") {
             const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            img.src = `${crew.image}`
             h2.innerHTML = crew.name
             main.appendChild(h2)
+            main.appendChild(img)
             }
         })
     }
@@ -71,11 +84,15 @@ function renderCrewNames(crew) {
         crew.forEach(crew => {
             if (crew.agency === "Roscosmos") {
             const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            img.src = `${crew.image}`
             h2.innerHTML = crew.name
             main.appendChild(h2)
+            main.appendChild(img)
             }
         })
     }
+    console.log(main.innerHTML)
 }
 
 

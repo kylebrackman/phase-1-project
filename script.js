@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
+function searchForCrewMember(name) {
+
+}
 
 // fetching SpaceX API and attempting to get crew info
 const selectAgencyDropdown = document.getElementById("selectAgency");
-selectAgencyDropdown.onchange = fetchCrewInfo
-function fetchCrewInfo() {
+selectAgencyDropdown.onchange = fetchCrewNames
+function fetchCrewNames() {
     fetch("https://api.spacexdata.com/v4/crew")
     .then(res => res.json())
     .then(data => renderCrewNames(data))

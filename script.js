@@ -1,21 +1,23 @@
-const searchName = document.getElementById("search");
+document.addEventListener("DOMContentLoaded", searchCrewName)
 
-searchName.addEventListener("submit", function(e) {
+const searchName = document.getElementById("search");
+searchName.addEventListener("submit", searchCrewName);
+
+function searchCrewName(e) {
     e.preventDefault()
-    alert("working!")
-});
+    console.log(e.target.crewMemberSearch.value)
+};
+
+
 
 // fetching SpaceX API and attempting to get crew info
 const selectAgencyDropdown = document.getElementById("selectAgency");
-
 selectAgencyDropdown.onchange = fetchCrewInfo
-
 function fetchCrewInfo() {
     fetch("https://api.spacexdata.com/v4/crew")
     .then(res => res.json())
     .then(data => renderCrewNames(data))
 };
-
 
 function renderCrewNames(crew) {
     const main = document.querySelector("main")

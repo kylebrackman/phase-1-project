@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <h1>Dragon Crew Members</h1>
+    <h1>Dragon Crew Members
+        <button id="darkMode">Dark Mode</button>
+    </h1>
+    <p>Know your crewmember? Search by name!</p>
+    <form id="search">
+        <input type="text" />
+        <button>Search</button>
+    </form>
     <p id="crewMembers" >Crew members by agency</p>
     <select id="selectAgency" onChange="changeAgency(this.value)">
         <option>Choose Agency</option>
@@ -20,12 +27,6 @@
         <option value="Roscosmos">Roscosmos</option>
     </select>
     <main></main>
-    <p>Know your crewmember? Search by name!</p>
-    <form id="search">
-        <input type="text" />
-        <button>Search</button>
-    </form>
-    <button id="darkMode">Dark Mode</button>
     <script src="script.js"></script>
 </body>
 </html>

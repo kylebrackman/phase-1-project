@@ -38,6 +38,9 @@ function renderCrewInfo(crew) {
             aTag.href= crew.wikipedia
             aTag.innerText = `${crew.name + " wikepedia link!"}`
             img.src = `${crew.image}`
+            img.addEventListener("mouseover", () => {
+                img.classList.toggle("imgMouseOver")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)
@@ -54,6 +57,12 @@ function renderCrewInfo(crew) {
             aTag.href= crew.wikipedia
             aTag.innerText = `${crew.name + " wikepedia link!"}`
             img.src = `${crew.image}`
+            img.addEventListener("mouseover", () => {
+                img.classList.toggle("imgMouseOver")
+            })
+            img.addEventListener("mouseout",() => {
+                img.classList.toggle("imgOut")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)
@@ -70,6 +79,9 @@ function renderCrewInfo(crew) {
             aTag.href= crew.wikipedia
             aTag.innerText = `${crew.name + " wikepedia link!"}`
             img.src = `${crew.image}`
+            img.addEventListener("mouseover", () => {
+                img.classList.toggle("imgMouseOver")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)
@@ -86,6 +98,9 @@ function renderCrewInfo(crew) {
             aTag.href= crew.wikipedia
             aTag.innerText = `${crew.name + " wikepedia link!"}`
             img.src = `${crew.image}`
+            img.addEventListener("mouseover", () => {
+                img.classList.toggle("imgMouseOver")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)
@@ -102,6 +117,9 @@ function renderCrewInfo(crew) {
             aTag.href= crew.wikipedia
             aTag.innerText = `${crew.name + " wikepedia link!"}`
             img.src = `${crew.image}`
+            img.addEventListener("mouseover", () => {
+                img.classList.toggle("imgMouseOver")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)

@@ -13,19 +13,22 @@ function renderCrewInfo(crew) {
     if (selectAgencyDropdown.value === "NASA" ) {
         crew.forEach(crew => {
             if (crew.agency === "NASA") {
-            const h2 = document.createElement("h2")
-            const img = document.createElement("img")
-            const aTag = document.createElement("a")
-            aTag.href= crew.wikipedia
-            aTag.innerText = `${crew.name + " wikepedia link!"}`
-            img.src = `${crew.image}`
-            img.addEventListener("mouseover", () => {
-                img.classList.toggle("imgMouseOver")
-            })
-            h2.innerHTML = crew.name
-            main.appendChild(h2)
-            main.appendChild(img)
-            main.appendChild(aTag)
+                const h2 = document.createElement("h2")
+                const img = document.createElement("img")
+                const aTag = document.createElement("a")
+                aTag.href= crew.wikipedia
+                aTag.innerText = `${crew.name + " wikepedia link!"}`
+                img.src = `${crew.image}`
+                img.addEventListener("mouseover", () => {
+                    img.classList.toggle("imgMouseOver")
+                })
+                img.addEventListener("mouseout",() => {
+                    img.classList.toggle("imgOut")
+                })
+                h2.innerHTML = crew.name
+                main.appendChild(h2)
+                main.appendChild(img)
+                main.appendChild(aTag)
             }
         })
     }
@@ -40,6 +43,9 @@ function renderCrewInfo(crew) {
             img.src = `${crew.image}`
             img.addEventListener("mouseover", () => {
                 img.classList.toggle("imgMouseOver")
+            })
+            img.addEventListener("mouseout",() => {
+                img.classList.toggle("imgOut")
             })
             h2.innerHTML = crew.name
             main.appendChild(h2)
@@ -82,6 +88,9 @@ function renderCrewInfo(crew) {
             img.addEventListener("mouseover", () => {
                 img.classList.toggle("imgMouseOver")
             })
+            img.addEventListener("mouseout",() => {
+                img.classList.toggle("imgOut")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)
@@ -100,6 +109,9 @@ function renderCrewInfo(crew) {
             img.src = `${crew.image}`
             img.addEventListener("mouseover", () => {
                 img.classList.toggle("imgMouseOver")
+            })
+            img.addEventListener("mouseout",() => {
+                img.classList.toggle("imgOut")
             })
             h2.innerHTML = crew.name
             main.appendChild(h2)
@@ -120,6 +132,9 @@ function renderCrewInfo(crew) {
             img.addEventListener("mouseover", () => {
                 img.classList.toggle("imgMouseOver")
             })
+            img.addEventListener("mouseout",() => {
+                img.classList.toggle("imgOut")
+            })
             h2.innerHTML = crew.name
             main.appendChild(h2)
             main.appendChild(img)
@@ -128,6 +143,7 @@ function renderCrewInfo(crew) {
         })
     }
 }
+
 
 let darkMode = document.getElementById("darkMode");
 darkMode.addEventListener("click", changeColorScheme);
@@ -140,8 +156,6 @@ function changeColorScheme() {
         darkMode.innerText = "Dark Mode"
     }
 };
-
-
 
 
 

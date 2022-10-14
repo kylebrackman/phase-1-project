@@ -1,4 +1,5 @@
 // fetching SpaceX API and attempting to get crew info
+
 const selectAgencyDropdown = document.getElementById("selectAgency");
 selectAgencyDropdown.addEventListener("change", fetchCrewNames)
 
@@ -16,7 +17,6 @@ function fetchCrewNames() {
         renderCrewInfo(savedCrewData)
     }
 };
-
 
 function renderCrewInfo(crew) {
     const main = document.querySelector("main")

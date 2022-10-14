@@ -11,7 +11,7 @@ The user will also have the option to set the page to "Dark Mode", which will ch
 Lastly, if a user is interested in seeing a crew member's photo more clearly, they can hover their mouse over any photo to increase it's size. Removing the mouse from the photo will set the photo back to it's original size. 
 
 ## GIF Walkthrough Below
-![Dragon-Crew-Members](dragon-crew-members.gif)
+![Dragon-Crew-Members](./dragon-crew-members.gif)
 
 
 

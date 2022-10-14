@@ -1,39 +1,47 @@
 // fetching SpaceX API and attempting to get crew info
 const selectAgencyDropdown = document.getElementById("selectAgency");
-selectAgencyDropdown.addEventListener("onchange", fetchCrewNames)
+selectAgencyDropdown.addEventListener("change", fetchCrewNames)
+
+
+let savedCrewData = null
 
 function fetchCrewNames() {
-    fetch("https://api.spacexdata.com/v4/crew")
-    .then(res => res.json())
-    .then(data => {
-        const crewInfo = data
-    })
+    if (savedCrewData === null) {
+        fetch("https://api.spacexdata.com/v4/crew")
+            .then(res => res.json())
+            .then(data => savedCrewData = data)
+            .then(() => renderCrewInfo(savedCrewData))
+    }
+    else {
+        renderCrewInfo(savedCrewData)
+    }
 };
+
 
 function renderCrewInfo(crew) {
     const main = document.querySelector("main")
-    main.innerHTML=""
+    main.innerHTML = ""
     const selectedAgency = selectAgencyDropdown.value
-        crew.forEach(crew => {
-            if (crew.agency === selectedAgency) {
-                const h2 = document.createElement("h2")
-                const img = document.createElement("img")
-                const aTag = document.createElement("a")
-                aTag.href= crew.wikipedia
-                aTag.innerText = `${crew.name + " wikepedia link!"}`
-                img.src = `${crew.image}`
-                img.addEventListener("mouseover", () => {
-                    img.classList.toggle("imgMouseOver")
-                })
-                img.addEventListener("mouseout",() => {
-                    img.classList.toggle("imgMouseOver")
-                })
-                h2.innerHTML = crew.name
-                main.appendChild(h2)
-                main.appendChild(img)
-                main.appendChild(aTag)
-            }
-        })
+    crew.forEach(crew => {
+        if (crew.agency === selectedAgency) {
+            const h2 = document.createElement("h2")
+            const img = document.createElement("img")
+            const aTag = document.createElement("a")
+            aTag.href = crew.wikipedia
+            aTag.innerText = `${crew.name + " wikepedia link!"}`
+            img.src = `${crew.image}`
+            img.addEventListener("mouseover", () => {
+                img.classList.toggle("imgMouseOver")
+            })
+            img.addEventListener("mouseout", () => {
+                img.classList.toggle("imgMouseOver")
+            })
+            h2.innerHTML = crew.name
+            main.appendChild(h2)
+            main.appendChild(img)
+            main.appendChild(aTag)
+        }
+    })
 }
 
 let darkMode = false;

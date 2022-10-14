@@ -59,3 +59,4 @@ function changeColorScheme() {
         darkModeButton.innerText = "Light Mode"
     }
 };
+

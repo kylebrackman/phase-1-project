@@ -8,7 +8,7 @@ Choosing the agency in the select panel will return a the name and wikipedia lin
 
 The user will also have the option to set the page to "Dark Mode", which will change the style of the page to a night / dark setting.
 
-Lastly, if a user is interested in seeing a crew member's photo more clearly, they can hover their mouse over any photo to increase it's size. Removing the mouse from the photo will set the photo back to it's original size. 
+Lastly, if a user is interested in seeing a crew member's photo more clearly, they can hover their mouse over any photo to increase it's size. Removing the mouse from the photo will set the photo back to it's original size.
 
 ## Example Below
 ![](gif/Dragon%20Crew%20Members.gif)

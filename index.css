@@ -1,20 +1,14 @@
 body {
-    background-color: azure;
-    color: black;
-    font-family: "copperplate";
-}
-.lightMode {
-    background-color: azure;
-    color: black;
+    background-image: linear-gradient(to right, gray, white);
     font-family: "copperplate";
 }
 .darkMode {
-    background-color: black;
-    color: azure;
+    background-image: linear-gradient(to right, black, gray);
     font-family: "copperplate";
+    color: white
 }
 h1 {
-    color: red;
+    color: #8B0000;
     font-family: "copperplate";
 }
 img {

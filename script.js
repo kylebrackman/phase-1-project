@@ -22,6 +22,9 @@ function renderCrewInfo(crew) {
     const main = document.querySelector("main")
     main.innerHTML = ""
     const selectedAgency = selectAgencyDropdown.value
+    // crew
+    //     .filter(({agency} === selectedAgency))
+    //     .forEach(renderCrewMember);
     crew.forEach(crew => {
         if (crew.agency === selectedAgency) {
             const h2 = document.createElement("h2")

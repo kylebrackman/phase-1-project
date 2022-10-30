@@ -1,5 +1,5 @@
 const selectAgencyDropdown = document.getElementById("selectAgency");
-selectAgencyDropdown.addEventListener("change", fetchCrewNames)
+selectAgencyDropdown.addEventListener("change", fetchCrewData)
 
 function fetchCrewData() {
     let savedCrewData = null

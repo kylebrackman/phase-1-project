@@ -8,8 +8,10 @@ function fetchCrewNames() {
     if (savedCrewData === null) {
         fetch("https://api.spacexdata.com/v4/crew")
             .then(res => res.json())
-            .then(data => savedCrewData = data)
-            .then(() => renderCrewInfo(savedCrewData))
+            .then(data => {
+                let savedCrewData = data
+                renderCrewInfo(savedCrewData)
+            })
     }
     else {
         renderCrewInfo(savedCrewData)
@@ -58,3 +60,11 @@ function changeColorScheme() {
     }
 };
 
+// function fetchCrewNames() {
+//     let savedCrewData = null
+//     if (savedCrewData === null) {
+//         fetch("https://api.spacexdata.com/v4/crew")
+//             .then(res => res.json())
+//             .then(data => savedCrewData = data)
+//             .then(() => renderCrewInfo(savedCrewData))
+//     }

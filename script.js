@@ -1,5 +1,8 @@
 const selectAgencyDropdown = document.getElementById("selectAgency");
 selectAgencyDropdown.addEventListener("change", fetchCrewData)
+const darkModeButton = document.getElementById("darkMode");
+darkModeButton.addEventListener("click", changeColorScheme);
+let darkMode = false;
 
 function fetchCrewData() {
     let savedCrewData = null
@@ -42,11 +45,6 @@ function renderCrewInfo(crew) {
     })
 }
 
-let darkMode = false;
-let darkModeButton = document.getElementById("darkMode");
-
-darkModeButton.addEventListener("click", changeColorScheme);
-
 function changeColorScheme() {
     darkMode = !darkMode
     document.body.classList.toggle("darkMode")
@@ -57,3 +55,4 @@ function changeColorScheme() {
         darkModeButton.innerText = "Light Mode"
     }
 };
+

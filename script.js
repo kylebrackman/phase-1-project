@@ -1,5 +1,3 @@
-// fetching SpaceX API and attempting to get crew info
-
 const selectAgencyDropdown = document.getElementById("selectAgency");
 selectAgencyDropdown.addEventListener("change", fetchCrewNames)
 
@@ -59,12 +57,3 @@ function changeColorScheme() {
         darkModeButton.innerText = "Light Mode"
     }
 };
-
-// function fetchCrewNames() {
-//     let savedCrewData = null
-//     if (savedCrewData === null) {
-//         fetch("https://api.spacexdata.com/v4/crew")
-//             .then(res => res.json())
-//             .then(data => savedCrewData = data)
-//             .then(() => renderCrewInfo(savedCrewData))
-//     }

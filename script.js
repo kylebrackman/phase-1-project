@@ -1,7 +1,7 @@
 const selectAgencyDropdown = document.getElementById("selectAgency");
 selectAgencyDropdown.addEventListener("change", fetchCrewNames)
 
-function fetchCrewNames() {
+function fetchCrewData() {
     let savedCrewData = null
     if (savedCrewData === null) {
         fetch("https://api.spacexdata.com/v4/crew")

@@ -1,3 +1,4 @@
+const spaceXData = "https://api.spacexdata.com/v4/crew"
 const selectAgencyDropdown = document.getElementById("selectAgency");
 selectAgencyDropdown.addEventListener("change", fetchCrewData)
 const darkModeButton = document.getElementById("darkMode");
@@ -7,10 +8,12 @@ let darkMode = false;
 function fetchCrewData() {
     let savedCrewData = null
     if (savedCrewData === null) {
-        fetch("https://api.spacexdata.com/v4/crew")
+        fetch(spaceXData)
             .then(res => res.json())
             .then(data => {
                 let savedCrewData = data
+                // this is passing savedCrewData to the above variable up top, then can be used below
+                // in the else statement?
                 renderCrewInfo(savedCrewData)
             })
     }
